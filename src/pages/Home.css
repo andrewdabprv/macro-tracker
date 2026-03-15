@@ -1,0 +1,174 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Body weight card */
+.weight-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  padding: 14px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weight-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weight-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.weight-card-today {
+  font-size: 20px;
+  font-weight: 700;
+  color: #007aff;
+}
+
+.weight-card-hint {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* 2×2 ring grid */
+.rings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ring-wrap {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  padding: 16px 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ring-svg-wrap {
+  position: relative;
+  width: 88px;
+  height: 88px;
+}
+
+.ring-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.ring-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.1;
+}
+
+.ring-goal {
+  font-size: 11px;
+  color: #aaa;
+  line-height: 1;
+}
+
+.ring-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.ring-unit {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.home-hint {
+  font-size: 13px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* Nutrient groups (shared with Today) */
+.nutrient-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nutrient-group {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.group-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.chevron {
+  font-size: 11px;
+  color: #888;
+}
+
+.nutrient-rows {
+  border-top: 1px solid #f0f0f0;
+  padding: 8px 0;
+  margin: 0 12px;
+}
+
+.nutrient-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.nutrient-row:last-child {
+  border-bottom: none;
+}
+
+.nutrient-label {
+  color: #444;
+}
+
+.nutrient-value {
+  font-weight: 500;
+  color: #111;
+}
+
+.nutrient-goal {
+  font-weight: 400;
+  color: #aaa;
+}

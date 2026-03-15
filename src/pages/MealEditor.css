@@ -1,0 +1,223 @@
+.meal-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Header */
+.meal-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.me-back-btn {
+  background: none;
+  border: none;
+  color: #007aff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.me-save-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #007aff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.me-save-btn:disabled {
+  background: #ccc;
+}
+
+/* Name input */
+.me-name-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  box-sizing: border-box;
+  color: #111;
+}
+
+.me-name-input:focus {
+  border-color: #007aff;
+}
+
+.me-name-input::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}
+
+/* Sections */
+.me-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.me-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.me-empty {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Ingredient list */
+.me-ing-list {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.me-ing-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 10px;
+}
+
+.me-ing-row:last-child {
+  border-bottom: none;
+}
+
+.me-ing-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.me-ing-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.me-ing-kcal {
+  font-size: 12px;
+  color: #888;
+}
+
+.me-ing-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.me-grams-input {
+  width: 64px;
+  padding: 6px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #007aff;
+  text-align: right;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.me-grams-input:focus {
+  border-color: #007aff;
+}
+
+.me-grams-input::-webkit-inner-spin-button,
+.me-grams-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.me-unit {
+  font-size: 13px;
+  color: #888;
+  width: 14px;
+}
+
+.me-remove-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  line-height: 1;
+}
+
+/* Food search */
+.me-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.me-search-input:focus {
+  border-color: #007aff;
+}
+
+.me-food-list {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.me-food-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 11px 14px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.me-food-item:last-child {
+  border-bottom: none;
+}
+
+.me-food-item:active {
+  background: #f5f5f5;
+}
+
+.me-food-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+}
+
+.me-food-meta {
+  font-size: 12px;
+  color: #888;
+}
