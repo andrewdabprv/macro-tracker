@@ -18,10 +18,9 @@
 
 /* Collapsible nutrient groups */
 .nutrient-group {
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .group-header {
@@ -34,30 +33,31 @@
   border: none;
   font-size: 15px;
   font-weight: 600;
+  color: #f2f2f7;
   cursor: pointer;
   text-align: left;
 }
 
 .chevron {
   font-size: 11px;
-  color: #888;
+  color: #636366;
 }
 
 .goals-rows {
-  border-top: 1px solid #f0f0f0;
-  background: #fafafa;
+  border-top: 1px solid #38383a;
+  background: #1c1c1e;
 }
 
 .settings-section-title {
   font-size: 18px;
   font-weight: 600;
-  color: #111;
+  color: #f2f2f7;
   margin: 0;
 }
 
 .settings-hint {
   font-size: 13px;
-  color: #888;
+  color: #8e8e93;
   margin: 0;
 }
 
@@ -71,12 +71,12 @@
   flex: 1;
   padding: 10px;
   border-radius: 8px;
-  border: 1.5px solid #e0e0e0;
-  background: #fff;
+  border: 1.5px solid #38383a;
+  background: #1c1c1e;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  color: #444;
+  color: #aeaeb2;
 }
 
 .gender-btn.active {
@@ -109,7 +109,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  color: #aaa;
+  color: #636366;
   margin-top: 4px;
 }
 
@@ -133,12 +133,12 @@
 
 .backup-err {
   font-size: 14px;
-  color: #ff3b30;
+  color: #ff453a;
 }
 
 /* Calculator result card */
 .calc-result {
-  background: #f8f8f8;
+  background: #2c2c2e;
   border-radius: 12px;
   padding: 16px;
   display: flex;
@@ -149,7 +149,7 @@
 .calc-result-title {
   font-size: 14px;
   font-weight: 600;
-  color: #444;
+  color: #aeaeb2;
   margin: 0;
 }
 
@@ -157,7 +157,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -167,7 +167,7 @@
   justify-content: space-between;
   padding: 10px 14px;
   font-size: 14px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #38383a;
 }
 
 .calc-result-row:last-child {
@@ -175,12 +175,12 @@
 }
 
 .calc-result-label {
-  color: #444;
+  color: #aeaeb2;
 }
 
 .calc-result-value {
   font-weight: 600;
-  color: #111;
+  color: #f2f2f7;
 }
 
 /* Shared form styles */
@@ -188,7 +188,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  background: #fafafa;
+  background: #2c2c2e;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
@@ -197,7 +197,7 @@
 .form-group-title {
   font-size: 12px;
   font-weight: 600;
-  color: #888;
+  color: #8e8e93;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 10px 12px 6px;
@@ -209,13 +209,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #38383a;
   gap: 8px;
 }
 
 .form-field-label {
   font-size: 14px;
-  color: #444;
+  color: #aeaeb2;
   flex: 1;
 }
 
@@ -230,6 +230,11 @@
   text-align: right;
   padding: 6px 8px;
   font-size: 14px;
+  background: #1c1c1e;
+  color: #f2f2f7;
+  border: 1px solid #38383a;
+  border-radius: 6px;
+  outline: none;
   -moz-appearance: textfield;
 }
 
@@ -241,7 +246,7 @@
 
 .form-unit {
   font-size: 13px;
-  color: #888;
+  color: #8e8e93;
   width: 30px;
   text-align: left;
 }
@@ -255,17 +260,23 @@
 .form-label {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: #e5e5ea;
 }
 
 .input {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #38383a;
   border-radius: 8px;
   font-size: 15px;
   outline: none;
   box-sizing: border-box;
+  background: #2c2c2e;
+  color: #f2f2f7;
+}
+
+.input::placeholder {
+  color: #48484a;
 }
 
 .input:focus {
@@ -287,10 +298,11 @@
 }
 
 .btn.primary:disabled {
-  background: #ccc;
+  background: #3a3a3c;
+  color: #636366;
 }
 
 .btn.secondary {
-  background: #f0f0f0;
-  color: #333;
+  background: #2c2c2e;
+  color: #f2f2f7;
 }

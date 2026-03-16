@@ -32,20 +32,22 @@
 }
 
 .me-save-btn:disabled {
-  background: #ccc;
+  background: #3a3a3c;
+  color: #636366;
 }
 
 /* Name input */
 .me-name-input {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #38383a;
   border-radius: 10px;
   font-size: 18px;
   font-weight: 600;
   outline: none;
   box-sizing: border-box;
-  color: #111;
+  background: #1c1c1e;
+  color: #f2f2f7;
 }
 
 .me-name-input:focus {
@@ -53,7 +55,7 @@
 }
 
 .me-name-input::placeholder {
-  color: #bbb;
+  color: #48484a;
   font-weight: 400;
 }
 
@@ -67,7 +69,7 @@
 .me-section-title {
   font-size: 13px;
   font-weight: 600;
-  color: #888;
+  color: #8e8e93;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0;
@@ -75,16 +77,15 @@
 
 .me-empty {
   font-size: 14px;
-  color: #aaa;
+  color: #636366;
   margin: 0;
 }
 
 /* Ingredient list */
 .me-ing-list {
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .me-ing-row {
@@ -92,7 +93,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 14px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #38383a;
   gap: 10px;
 }
 
@@ -111,7 +112,7 @@
 .me-ing-name {
   font-size: 15px;
   font-weight: 500;
-  color: #111;
+  color: #f2f2f7;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -119,7 +120,7 @@
 
 .me-ing-kcal {
   font-size: 12px;
-  color: #888;
+  color: #8e8e93;
 }
 
 .me-ing-right {
@@ -132,11 +133,12 @@
 .me-grams-input {
   width: 64px;
   padding: 6px 8px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #38383a;
   border-radius: 7px;
   font-size: 15px;
   font-weight: 600;
   color: #007aff;
+  background: #2c2c2e;
   text-align: right;
   outline: none;
   -moz-appearance: textfield;
@@ -153,14 +155,14 @@
 
 .me-unit {
   font-size: 13px;
-  color: #888;
+  color: #8e8e93;
   width: 14px;
 }
 
 .me-remove-btn {
   background: none;
   border: none;
-  color: #ccc;
+  color: #48484a;
   font-size: 16px;
   cursor: pointer;
   padding: 4px 6px;
@@ -171,11 +173,17 @@
 .me-search-input {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #38383a;
   border-radius: 8px;
   font-size: 15px;
   outline: none;
   box-sizing: border-box;
+  background: #2c2c2e;
+  color: #f2f2f7;
+}
+
+.me-search-input::placeholder {
+  color: #48484a;
 }
 
 .me-search-input:focus {
@@ -183,10 +191,9 @@
 }
 
 .me-food-list {
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
 }
@@ -198,7 +205,7 @@
   padding: 11px 14px;
   background: none;
   border: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #38383a;
   text-align: left;
   cursor: pointer;
 }
@@ -208,16 +215,16 @@
 }
 
 .me-food-item:active {
-  background: #f5f5f5;
+  background: #2c2c2e;
 }
 
 .me-food-name {
   font-size: 15px;
   font-weight: 500;
-  color: #111;
+  color: #f2f2f7;
 }
 
 .me-food-meta {
   font-size: 12px;
-  color: #888;
+  color: #8e8e93;
 }

@@ -28,7 +28,7 @@ function Ring({ value, goal, color, label, unit }) {
     <div className="ring-wrap">
       <div className="ring-svg-wrap">
         <svg width="88" height="88" viewBox="0 0 88 88">
-          <circle cx="44" cy="44" r={R} fill="none" stroke="#e8e8e8" strokeWidth="7" />
+          <circle cx="44" cy="44" r={R} fill="none" stroke="#3a3a3c" strokeWidth="7" />
           {(pct > 0 || over) && (
             <circle
               cx="44" cy="44" r={R}
@@ -109,13 +109,13 @@ function WeightCard() {
               <circle cx={p.x} cy={p.y} r="4" fill={p.isToday ? '#007aff' : '#5ac8fa'} />
             ) : (
               <circle cx={p.x} cy={(CHART_DATA_TOP + CHART_DATA_BOT) / 2} r="3"
-                fill="none" stroke="#e0e0e0" strokeWidth="1.5" />
+                fill="none" stroke="#3a3a3c" strokeWidth="1.5" />
             )}
             <text
               x={p.x} y={CHART_LABEL_Y}
               textAnchor="middle"
               fontSize="10"
-              fill={p.isToday ? '#007aff' : '#aaa'}
+              fill={p.isToday ? '#007aff' : '#636366'}
               fontWeight={p.isToday ? '700' : '400'}
             >
               {p.day}

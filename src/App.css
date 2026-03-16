@@ -21,8 +21,8 @@
 
 .tab-bar {
   display: flex;
-  border-top: 1px solid #e0e0e0;
-  background: #fff;
+  border-top: 1px solid #38383a;
+  background: #1c1c1e;
   padding-bottom: env(safe-area-inset-bottom);
 }
 
@@ -31,7 +31,7 @@
   padding: 14px 6px;
   text-align: center;
   text-decoration: none;
-  color: #888;
+  color: #636366;
   font-size: 13px;
   font-weight: 500;
 }

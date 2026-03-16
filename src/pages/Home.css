@@ -12,9 +12,8 @@
 
 /* Body weight card */
 .weight-card {
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   padding: 14px 16px 10px;
   display: flex;
   flex-direction: column;
@@ -30,7 +29,7 @@
 .weight-card-title {
   font-size: 15px;
   font-weight: 600;
-  color: #111;
+  color: #f2f2f7;
 }
 
 .weight-card-today {
@@ -41,14 +40,13 @@
 
 .weight-card-hint {
   font-size: 13px;
-  color: #aaa;
+  color: #636366;
 }
 
 /* Calorie streak card */
 .streak-card {
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   padding: 14px 16px;
   display: flex;
   flex-direction: column;
@@ -64,7 +62,7 @@
 .streak-title {
   font-size: 15px;
   font-weight: 600;
-  color: #111;
+  color: #f2f2f7;
 }
 
 .streak-count {
@@ -92,12 +90,12 @@
 }
 
 .streak-dot.hit { background: #34c759; }
-.streak-dot.miss { background: #e8e8e8; }
+.streak-dot.miss { background: #3a3a3c; }
 .streak-dot.today { outline: 2.5px solid #007aff; outline-offset: 2px; }
 
 .streak-letter {
   font-size: 11px;
-  color: #aaa;
+  color: #636366;
 }
 
 .streak-letter.today {
@@ -113,9 +111,8 @@
 }
 
 .ring-wrap {
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   padding: 16px 8px 12px;
   display: flex;
   flex-direction: column;
@@ -142,34 +139,34 @@
 .ring-value {
   font-size: 15px;
   font-weight: 700;
-  color: #111;
+  color: #f2f2f7;
   line-height: 1.1;
 }
 
 .ring-goal {
   font-size: 11px;
-  color: #aaa;
+  color: #636366;
   line-height: 1;
 }
 
 .ring-label {
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: #e5e5ea;
 }
 
 .ring-unit {
   font-size: 11px;
-  color: #aaa;
+  color: #636366;
 }
 
 .home-hint {
   font-size: 13px;
-  color: #aaa;
+  color: #636366;
   text-align: center;
 }
 
-/* Nutrient groups (shared with Today) */
+/* Nutrient groups */
 .nutrient-groups {
   display: flex;
   flex-direction: column;
@@ -177,10 +174,9 @@
 }
 
 .nutrient-group {
-  background: #fff;
+  background: #1c1c1e;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .group-header {
@@ -193,17 +189,18 @@
   border: none;
   font-size: 15px;
   font-weight: 600;
+  color: #f2f2f7;
   cursor: pointer;
   text-align: left;
 }
 
 .chevron {
   font-size: 11px;
-  color: #888;
+  color: #636366;
 }
 
 .nutrient-rows {
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #38383a;
   padding: 8px 0;
   margin: 0 12px;
 }
@@ -213,7 +210,7 @@
   justify-content: space-between;
   padding: 10px 0;
   font-size: 14px;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #2c2c2e;
 }
 
 .nutrient-row:last-child {
@@ -221,15 +218,15 @@
 }
 
 .nutrient-label {
-  color: #444;
+  color: #aeaeb2;
 }
 
 .nutrient-value {
   font-weight: 500;
-  color: #111;
+  color: #f2f2f7;
 }
 
 .nutrient-goal {
   font-weight: 400;
-  color: #aaa;
+  color: #636366;
 }
