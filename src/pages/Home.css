@@ -44,6 +44,67 @@
   color: #aaa;
 }
 
+/* Calorie streak card */
+.streak-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.streak-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.streak-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.streak-count {
+  font-size: 20px;
+  font-weight: 700;
+  color: #34c759;
+}
+
+.streak-dots {
+  display: flex;
+  justify-content: space-between;
+}
+
+.streak-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.streak-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.streak-dot.hit { background: #34c759; }
+.streak-dot.miss { background: #e8e8e8; }
+.streak-dot.today { outline: 2.5px solid #007aff; outline-offset: 2px; }
+
+.streak-letter {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.streak-letter.today {
+  color: #007aff;
+  font-weight: 700;
+}
+
 /* 2×2 ring grid */
 .rings-grid {
   display: grid;

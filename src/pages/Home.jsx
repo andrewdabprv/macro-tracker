@@ -127,6 +127,50 @@ function WeightCard() {
   )
 }
 
+function StreakCard() {
+  const { getTotalsForDate } = useFoodLog()
+  const { goals } = useGoals()
+  const calorieGoal = goals.calories
+
+  const today = new Date().toISOString().slice(0, 10)
+
+  const days = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date()
+    d.setDate(d.getDate() - (6 - i))
+    const dateStr = d.toISOString().slice(0, 10)
+    const cals = calorieGoal > 0 ? getTotalsForDate(dateStr).calories : 0
+    const hit = calorieGoal > 0 && cals >= calorieGoal * 0.9
+    const letter = d.toLocaleDateString('en-US', { weekday: 'narrow' })
+    return { dateStr, hit, letter, isToday: dateStr === today }
+  })
+
+  // Count streak backwards from today (count today only if already hit)
+  let streak = 0
+  for (let i = 6; i >= 0; i--) {
+    if (days[i].hit) streak++
+    else break
+  }
+
+  if (calorieGoal === 0) return null
+
+  return (
+    <div className="streak-card">
+      <div className="streak-header">
+        <span className="streak-title">Calorie Streak</span>
+        <span className="streak-count">{streak} {streak === 1 ? 'day' : 'days'}</span>
+      </div>
+      <div className="streak-dots">
+        {days.map(({ dateStr, hit, letter, isToday }) => (
+          <div key={dateStr} className="streak-day">
+            <div className={`streak-dot ${hit ? 'hit' : 'miss'} ${isToday ? 'today' : ''}`} />
+            <span className={`streak-letter ${isToday ? 'today' : ''}`}>{letter}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   const { totals } = useFoodLog()
   const { goals } = useGoals()
@@ -138,6 +182,8 @@ export default function Home() {
       <h1 className="page-title">Home</h1>
 
       <WeightCard />
+
+      <StreakCard />
 
       <div className="rings-grid">
         {MAIN.map(({ key, label, unit, color }) => (

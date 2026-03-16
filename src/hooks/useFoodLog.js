@@ -42,5 +42,15 @@ export function useFoodLog(date) {
     return acc
   }, emptyNutrients())
 
-  return { entries, totals, logFood, removeEntry, updateGrams }
+  function getTotalsForDate(d) {
+    return log.filter(e => e.date === d).reduce((acc, e) => {
+      const factor = e.grams / 100
+      for (const { key } of NUTRIENT_CONFIG) {
+        acc[key] = (acc[key] ?? 0) + (e.foodSnapshot[key] ?? 0) * factor
+      }
+      return acc
+    }, emptyNutrients())
+  }
+
+  return { entries, totals, logFood, removeEntry, updateGrams, getTotalsForDate }
 }
