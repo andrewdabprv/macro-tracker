@@ -127,6 +127,23 @@ function WeightCard() {
   )
 }
 
+function DayBox({ hit, logged, isToday }) {
+  return (
+    <div className={`streak-box ${isToday ? 'streak-box-today' : ''}`}>
+      {hit ? (
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <polyline points="3,9 7,13 15,5" stroke="#34c759" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      ) : logged ? (
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <line x1="4" y1="4" x2="14" y2="14" stroke="#ff453a" strokeWidth="2.2" strokeLinecap="round"/>
+          <line x1="14" y1="4" x2="4" y2="14" stroke="#ff453a" strokeWidth="2.2" strokeLinecap="round"/>
+        </svg>
+      ) : null}
+    </div>
+  )
+}
+
 function StreakCard() {
   const { getTotalsForDate } = useFoodLog()
   const { goals } = useGoals()
@@ -140,11 +157,11 @@ function StreakCard() {
     const dateStr = d.toISOString().slice(0, 10)
     const cals = calorieGoal > 0 ? getTotalsForDate(dateStr).calories : 0
     const hit = calorieGoal > 0 && cals >= calorieGoal * 0.9
-    const letter = d.toLocaleDateString('en-US', { weekday: 'narrow' })
-    return { dateStr, hit, letter, isToday: dateStr === today }
+    const logged = cals > 0
+    const letter = d.toLocaleDateString('en-US', { weekday: 'short' })
+    return { dateStr, hit, logged, letter, isToday: dateStr === today }
   })
 
-  // Count streak backwards from today (count today only if already hit)
   let streak = 0
   for (let i = 6; i >= 0; i--) {
     if (days[i].hit) streak++
@@ -159,10 +176,10 @@ function StreakCard() {
         <span className="streak-title">Calorie Streak</span>
         <span className="streak-count">{streak} {streak === 1 ? 'day' : 'days'}</span>
       </div>
-      <div className="streak-dots">
-        {days.map(({ dateStr, hit, letter, isToday }) => (
+      <div className="streak-days">
+        {days.map(({ dateStr, hit, logged, letter, isToday }) => (
           <div key={dateStr} className="streak-day">
-            <div className={`streak-dot ${hit ? 'hit' : 'miss'} ${isToday ? 'today' : ''}`} />
+            <DayBox hit={hit} logged={logged} isToday={isToday} />
             <span className={`streak-letter ${isToday ? 'today' : ''}`}>{letter}</span>
           </div>
         ))}

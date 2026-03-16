@@ -13,7 +13,8 @@
 /* Body weight card */
 .weight-card {
   background: #1c1c1e;
-  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
   padding: 14px 16px 10px;
   display: flex;
   flex-direction: column;
@@ -46,11 +47,12 @@
 /* Calorie streak card */
 .streak-card {
   background: #1c1c1e;
-  border-radius: 14px;
-  padding: 14px 16px;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .streak-header {
@@ -71,27 +73,34 @@
   color: #34c759;
 }
 
-.streak-dots {
+.streak-days {
   display: flex;
   justify-content: space-between;
+  gap: 6px;
 }
 
 .streak-day {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
-.streak-dot {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+.streak-box {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 1.5px solid #38383a;
+  background: #2c2c2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.streak-dot.hit { background: #34c759; }
-.streak-dot.miss { background: #3a3a3c; }
-.streak-dot.today { outline: 2.5px solid #007aff; outline-offset: 2px; }
+.streak-box-today {
+  border-color: #007aff;
+}
 
 .streak-letter {
   font-size: 11px;
@@ -100,7 +109,7 @@
 
 .streak-letter.today {
   color: #007aff;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* 2×2 ring grid */
@@ -112,7 +121,8 @@
 
 .ring-wrap {
   background: #1c1c1e;
-  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
   padding: 16px 8px 12px;
   display: flex;
   flex-direction: column;
@@ -175,7 +185,8 @@
 
 .nutrient-group {
   background: #1c1c1e;
-  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
   overflow: hidden;
 }
 
