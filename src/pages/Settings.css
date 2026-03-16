@@ -61,6 +61,36 @@
   margin: 0;
 }
 
+.diet-mode-hint {
+  text-align: center;
+}
+
+.seg-control {
+  display: flex;
+  background: #2c2c2e;
+  border-radius: 9px;
+  padding: 2px;
+}
+
+.seg-btn {
+  flex: 1;
+  padding: 7px;
+  border: none;
+  background: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8e8e93;
+  cursor: pointer;
+}
+
+.seg-btn.active {
+  background: #3a3a3c;
+  color: #f2f2f7;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
 /* Gender toggle */
 .gender-row {
   display: flex;

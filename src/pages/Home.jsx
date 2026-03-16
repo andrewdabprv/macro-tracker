@@ -144,9 +144,16 @@ function DayBox({ hit, logged, isToday }) {
   )
 }
 
+function isHit(cals, goal, mode) {
+  if (cals <= 0) return false
+  if (mode === 'cut')      return cals <= goal * 1.05
+  if (mode === 'bulk')     return cals >= goal * 0.9
+  /* maintain */           return cals >= goal * 0.9 && cals <= goal * 1.1
+}
+
 function StreakCard() {
   const { getTotalsForDate } = useFoodLog()
-  const { goals } = useGoals()
+  const { goals, dietMode } = useGoals()
   const calorieGoal = goals.calories
 
   const today = new Date().toISOString().slice(0, 10)
@@ -156,8 +163,8 @@ function StreakCard() {
     d.setDate(d.getDate() - (6 - i))
     const dateStr = d.toISOString().slice(0, 10)
     const cals = calorieGoal > 0 ? getTotalsForDate(dateStr).calories : 0
-    const hit = calorieGoal > 0 && cals >= calorieGoal * 0.9
     const logged = cals > 0
+    const hit = calorieGoal > 0 && isHit(cals, calorieGoal, dietMode)
     const letter = d.toLocaleDateString('en-US', { weekday: 'short' })
     return { dateStr, hit, logged, letter, isToday: dateStr === today }
   })

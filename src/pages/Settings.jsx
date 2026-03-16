@@ -36,7 +36,7 @@ function goalLabel(v) {
 }
 
 export default function Settings() {
-  const { goals, setGoal, applyAll } = useGoals()
+  const { goals, setGoal, applyAll, dietMode, setDietMode } = useGoals()
   const groups = getNutrientGroups()
   const [expandedGroup, setExpandedGroup] = useState(null)
 
@@ -73,6 +73,26 @@ export default function Settings() {
   return (
     <div className="settings">
       <h1 className="page-title">Settings</h1>
+
+      {/* Diet mode */}
+      <section className="settings-section">
+        <h2 className="settings-section-title">Diet Mode</h2>
+        <p className="settings-hint">Affects how your calorie streak is scored each day.</p>
+        <div className="seg-control">
+          {[['cut','Cut'],['maintain','Maintain'],['bulk','Bulk']].map(([val, label]) => (
+            <button
+              key={val}
+              className={`seg-btn ${dietMode === val ? 'active' : ''}`}
+              onClick={() => setDietMode(val)}
+            >{label}</button>
+          ))}
+        </div>
+        <p className="settings-hint diet-mode-hint">
+          {dietMode === 'cut'      && 'Checkmark if you ate at or under your calorie goal.'}
+          {dietMode === 'maintain' && 'Checkmark if you stayed within ±10% of your calorie goal.'}
+          {dietMode === 'bulk'     && 'Checkmark if you hit at least 90% of your calorie goal.'}
+        </p>
+      </section>
 
       {/* Goals */}
       <section className="settings-section">
@@ -222,7 +242,7 @@ export default function Settings() {
   )
 }
 
-const BACKUP_KEYS = ['foods', 'meals', 'food-log', 'macro-goals', 'body-weight']
+const BACKUP_KEYS = ['foods', 'meals', 'food-log', 'macro-goals', 'diet-mode', 'body-weight']
 
 function DataBackup() {
   const importRef = useRef()
