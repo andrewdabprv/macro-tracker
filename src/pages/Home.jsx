@@ -131,13 +131,13 @@ function DayBox({ hit, logged, isToday }) {
   return (
     <div className={`streak-box ${isToday ? 'streak-box-today' : ''}`}>
       {hit ? (
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <polyline points="3,9 7,13 15,5" stroke="#34c759" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg width="62%" height="62%" viewBox="0 0 20 20" fill="none">
+          <polyline points="2,10 7,16 18,4" stroke="#34c759" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ) : logged ? (
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <line x1="4" y1="4" x2="14" y2="14" stroke="#ff453a" strokeWidth="2.2" strokeLinecap="round"/>
-          <line x1="14" y1="4" x2="4" y2="14" stroke="#ff453a" strokeWidth="2.2" strokeLinecap="round"/>
+        <svg width="62%" height="62%" viewBox="0 0 20 20" fill="none">
+          <line x1="3" y1="3" x2="17" y2="17" stroke="#ff453a" strokeWidth="2.8" strokeLinecap="round"/>
+          <line x1="17" y1="3" x2="3" y2="17" stroke="#ff453a" strokeWidth="2.8" strokeLinecap="round"/>
         </svg>
       ) : null}
     </div>

@@ -76,7 +76,7 @@
 .streak-days {
   display: flex;
   justify-content: space-between;
-  gap: 6px;
+  gap: 10px;
 }
 
 .streak-day {
@@ -90,8 +90,8 @@
 .streak-box {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 8px;
-  border: 1.5px solid #38383a;
+  border-radius: 14px;
+  border: 2.5px solid #38383a;
   background: #2c2c2e;
   display: flex;
   align-items: center;
