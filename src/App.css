@@ -28,15 +28,22 @@
 
 .tab {
   flex: 1;
-  padding: 14px 6px;
+  padding: 12px 6px 10px;
   text-align: center;
   text-decoration: none;
   color: #636366;
-  font-size: 13px;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .tab.active {
   color: #007aff;
-  font-weight: 600;
+}
+
+.tab-label {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
 }
