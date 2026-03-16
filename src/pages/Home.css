@@ -91,7 +91,7 @@
   width: 100%;
   aspect-ratio: 1;
   border-radius: 14px;
-  border: 2.5px solid #38383a;
+  border: 3.5px solid #38383a;
   background: #2c2c2e;
   display: flex;
   align-items: center;
@@ -100,6 +100,7 @@
 
 .streak-box-today {
   border-color: #007aff;
+  border-width: 3.5px;
 }
 
 .streak-letter {
